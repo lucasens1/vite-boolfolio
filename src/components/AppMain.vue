@@ -1,6 +1,10 @@
 <script>
 import axios from 'axios';
+import AppCard from './AppCard.vue';
 export default {
+    components : {
+        AppCard
+    },
     data(){
         return {
             // Creo variabil che conterrà i progetti
@@ -19,7 +23,16 @@ export default {
 
 
 <template>
-    <h1>Main Ciao!</h1>
+    <!-- <h1>Main Ciao!</h1> -->
+
+    <div class="container">
+        <h1> Lista dei progetti realizzati :</h1>    
+            <div class="row row-cols-4">
+                <div class="col g-3" v-for="project in projects">
+                    <AppCard :project="project"/>
+                </div>
+            </div>
+    </div>
 </template>
 
 
