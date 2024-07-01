@@ -1,6 +1,6 @@
 <script>
 import axios from 'axios';
-import AppCard from './AppCard.vue';
+import AppCard from '../components/AppCard.vue';
 export default {
     components : {
         AppCard
@@ -25,7 +25,7 @@ export default {
 <template>
     <!-- <h1>Main Ciao!</h1> -->
 
-    <div class="container">
+    <div class="container ms_pt-120">
         <h1> Lista dei progetti realizzati :</h1>    
             <div class="row row-cols-4">
                 <div class="col g-3" v-for="project in projects">
@@ -36,5 +36,8 @@ export default {
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
+.ms_pt-120{
+    padding-top: 120px;
+}
 </style>
