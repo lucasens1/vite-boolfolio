@@ -36,8 +36,5 @@ export default {
 </template>
 
 
-<style lang="scss" scoped>
-.ms_pt-120{
-    padding-top: 120px;
-}
+<style lang="scss">
 </style>

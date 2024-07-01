@@ -2,7 +2,6 @@
 </script>
 
 <template>
-    <h1 class="ms_pt-120">Home-Page</h1>
 </template>
 
 <style>
