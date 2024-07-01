@@ -35,6 +35,15 @@ export default {
 			<h1> {{ project.title }} </h1>
 			<p> {{ project.description }} </p>
 			<p class="badge p-2 fs-5 fw-lighter" :style="{ backgroundColor: project.type.color }"> {{ project.type.name }} </p>
+			<ul class="my-2 d-flex flex-column gap-2 align-items-start">
+                <li v-for="tech in project.technologies" class="d-flex justify-content-around align-items-center w-100">
+                    <span class="p-1 fs-4">{{ tech ? tech.name : "Non sono state specificate le tecnologie utilizzate" }}</span>
+                    <span class="badge p-2 mx-2 fs-5 fw-light" style="background-color: black;">{{ tech.version ? tech.version : "N/A" }}</span>
+                </li>
+                <li v-if="project.technologies.length === 0">
+                    <i><span class="fw-lighter">Non sono state specificate le tecnologie utilizzate.</span></i>
+                </li>
+            </ul>
 		</div>
 	</div>
 </template>
