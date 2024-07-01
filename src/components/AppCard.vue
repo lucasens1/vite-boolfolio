@@ -6,6 +6,7 @@ export default {
 }
 </script>
 <template>
+    <router-link :to="{ name : 'single-project', params: { slug : project.slug } }">
     <div class="card h-100 my-3">
         <div class="card-body">
             <h3><i>{{ project.title }}</i></h3>
@@ -23,4 +24,5 @@ export default {
             </ul>
         </div>
     </div>
+</router-link>
 </template>
