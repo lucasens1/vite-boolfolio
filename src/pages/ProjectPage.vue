@@ -25,7 +25,7 @@ export default {
 <template>
     <!-- <h1>Main Ciao!</h1> -->
 
-    <div class="container ms_pt-120">
+    <div class="container ms_pt-120 pb-5">
         <h1> Lista dei progetti realizzati :</h1>    
             <div class="row row-cols-4">
                 <div class="col g-3" v-for="project in projects">

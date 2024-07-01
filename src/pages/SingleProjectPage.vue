@@ -16,15 +16,15 @@ export default {
 			console.log(r); // Mi arriva le info della pagina show dello slug
 			this.project = r.data.results;
 		})
-		.catch((error => {
-			console.log(error);
+		.catch((error) => {
+            console.log('ERRORE QUI :', error);
 			if(error.response.status === 404){
 				console.log('reindirizzo in not found');
 				// in pages creo NotFoundPage.vue
 				// Devo utilizzare la navigazione programmatica, quindi $router
 				this.$router.push({name: 'not-found'});
 			}
-		}));
+		});
 	}
 }
 </script>
@@ -34,6 +34,7 @@ export default {
 		<div v-if="project !== null">
 			<h1> {{ project.title }} </h1>
 			<p> {{ project.description }} </p>
+			<p class="badge p-2 fs-5 fw-lighter" :style="{ backgroundColor: project.type.color }"> {{ project.type.name }} </p>
 		</div>
 	</div>
 </template>

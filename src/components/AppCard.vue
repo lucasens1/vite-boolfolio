@@ -6,10 +6,11 @@ export default {
 }
 </script>
 <template>
-    <router-link :to="{ name : 'single-project', params: { slug : project.slug } }">
     <div class="card h-100 my-3">
         <div class="card-body">
-            <h3><i>{{ project.title }}</i></h3>
+            <router-link :to="{ name : 'single-project', params: { slug : project.slug } }">
+                <h3><i>{{ project.title }}</i></h3>
+            </router-link>
             <!-- Implemento il tipo di progetto e controllo se lo abbia assegnato -->
             <h6>Tipo di progetto : <span class="badge mx-2 my-2" :style="{ backgroundColor: project.type.color ? project.type.color : 'black' }"> {{ project.type.name ? project.type.name : 'tipo non specificato' }} </span></h6>
             <p> Lista delle tecnologie utilizzate : </p>
@@ -24,5 +25,4 @@ export default {
             </ul>
         </div>
     </div>
-</router-link>
 </template>

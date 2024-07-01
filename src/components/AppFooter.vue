@@ -3,7 +3,7 @@
 
 
 <template>
-<div class="ms_footer mt-5">
+<div class="ms_footer">
     <h1 class="p-4">FOOTER </h1>
 </div>
 </template>
@@ -13,5 +13,8 @@
     min-height : 80px;
     background-color: black;
     color : white;
+        h1 {
+            margin : 0;
+        }
 }
 </style>
